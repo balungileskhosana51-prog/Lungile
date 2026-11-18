@@ -3,220 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balungile</title>
-    <style>
+<title>Daily news</title>
+<style>
     *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-   }
-   html{
-    scroll-behavior:smooth;
-   }
-   body{
-    font-family:sans-serif;
-    line-height:1.6;
-    color: #333;
-   }
-   header{
-    background:#ffffff;
-    box-shadow:0 2px8px rgba(0,0,0,0,8);
-   }
-   .navbar{
-    max-width: 1100px;
-    padding: 20px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-   }
-   .logo{
-    color:#2563eb;
-    font-size: 24px; 
-   }
-   .nav-links{
-    list-style: none;
-    display: flex;
-    gap: 25px;
-   }
-  .nav-links a{
-text-decoration:none;
-    color: #333;
-     font-weight: bold;
-   }
-   .nav-links a:hover{
-    color:#2563;
-   }
-   .hero{
-    min-height: 450px;
-    background: linear-gradient(135deg,#1e3e8a,#3b82f6);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    padding: 60px 20px;
-   }
-   .hero-content{
-    max-width: 700px;
-   }
-   .hero h1{
-    font-size:clamps(32px,5vw,48px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-   }
-   .hero p{
-    font-size: 18px;
-    margin-bottom: 30px;
-
-   }
-   .btn{
-    display: inline-block;
-    background-color:#ffff;
-    color:#2563ab;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-   }
-   .btn :hover{
-    background-color: #d2d9e6;
-    transform: translateY(-2px);
-   }
-   .service{
-    padding: 70px 20px;
-    text-align: center;
-    background-color: #f9fafb;
-   }
-   .service h2,
-   .about h2
-   .contact h2{
-    font-size: 32px;
-    margin-bottom: 15px;
-   }
-    .service-description{
+    }
+     body{
+        font-family:arial,san-seif;
+    background-color:#f4f4f4;
+    border-bottom:1px solid#ddd;
+    color:#333;
+    line-height:1,6
+     }
+     header{
+        font-size: 36px;
+        margin-bottom: 5px;
+     }
+     naV{
+        background-color: #e63946;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 12px;
+     }
+     nav a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+     }
+     nav a:hover{
+        color: #ffd166;
+     }
+     main{
+        max-width: 1100px;
+        margin: 25px auto;
+        padding: 0 20px;
+     }
+     .featured{
+        background-color: white;
         margin-bottom: 35px;
-        color: #666;
-    }
-
-   .service-container{
-    max-width: 1100px;
-    margin: auto;
-    gap: 25px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-   }
-   .service-card h3{
-    color: #2563eb;
-    margin-bottom: 12px;
-   }
-   .about{
-    margin: auto;
-    padding: 70px 20px;
-    text-align: center;
-    max-width: 800px;
-   }
-   .about p{
-    color: #666;
-    font-size: 17p
-    }
-    .contact{
-        background-color: #eff6ff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px #00000015;
+     }
+     .featured img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+     }
+     .featured-text{
+        padding: 25px;
+     }
+     .featured-text h2{
+        color: #14213d;
+        margin-bottom:10px ;
+     }
+     .featured-text a,
+     .news-card a{
+        display: inline-block;
+        color: #e63946;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 12px;
+     }
+     .latest-news a:hover,
+     .nwe-card a:hover{
+        text-decoration: none;
+     }
+     .latest-news h2{
+        margin-bottom: 20px;
+        color: #14213d;
+     }
+     .new container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+     }
+     .news-card{
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px #00000015;
+        transition: 0.3s;
+     }
+     .news-card hover{
+        transform: rotateY(-5px);
+     }
+     .new-card img{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+     }
+     .card-content span{
+        color: #e63946;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+     }
+     .card-content h3{
+        margin: 8px 0;
+        color: #14213d;
+     }
+     footer{
+        background-color: #14213d;
+        color: white;
         text-align: center;
-        padding: 60px 20px;
-    }
-    .contac p{
-        margin-bottom: 25px;
-    }
-        .contact .btn{
-            background-color: #2563eb;
-            color: white;
+        padding: 20px;
+        margin-top: 40px;
+     }
+     @media(max-width:768){
+        .news-container{
+            grid-template-columns: 1fr;
         }
-            .contac.btn:hover{
-                background-color: #1d4ed8;
-            }
-            footer{
-                background-color: #111827;
-                color: white;
-                text-align: center;
-                padding: 20px;
-            }
-            @media(max-width:768px){
-            .navbar{
-                flex-direction:column;
-            }
-            .nav-links{
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 12px 20px;
-            }
-            .service-container{
-                grid-template-columns: 1fr;
-            }
-            .hero{
-                min-height: 380px;
-            }
+        .featured img{
+            height: 220px;
         }
-
-
-   
-    </style>
+        header h1{
+            font-size: 28px;
+        }
+        nav{
+            gap: 15px;
+        }
+     }
+</style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h2 class="logo">Brightbusiness</h2>
-            <ul class="nav-links">
-                <li><a href="index.html">home</a></li>
-              <li><a href="service.html">service</a></li>
-              <li><a href="about.html">about</a></li>
-              <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+   <header>
+   <h1>Daily new</h1>
+    <p>your source for the latest news</p>
     </header>
+    <nav>
+        <a href="index.html">home</a>
+         <a href="politics.html">politics</a>
+          <a href="sports.html">sports</a>
+            <a href="technology.html">technology</a>
+             <a href="entertainment.html">entertainment</a>
+    </nav>
     <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>Grow your business with us</h1>
-                <p>we provide reliable solution to help your business grow and succeed</p>
-                <a href="#contact" class="btn">get in touch</a>
+        <section class="featured">
+            <img src="OIP (3).webp" alt="featured news">
+            <div class="featured-text">
+                <h2>Breaking news:A new day begins</h2>
+                <P>Staying informed with the latest events happening around the world</P>
+                <a href="entertainment.html">read more</a>
             </div>
         </section>
-        <section class="service" id="service">
-        <h2>our service</h2>
-        <p class="section-description">we offer service designed to help your business</p>
+        <section class="latest-news">
+            <h2>Latest news</h2>
+            <div class="news-container">
+                <article class="news-card">
+                    <img src="OIP (3).webp" alt="politics news">
+                    <div class="card-content">
+                        <span>Politics</span>
+                        <h3>Leaders meet for important talks</h3>
+                        <p>World leaders discuss important issues affecting communities</p>
+                        <a href="politics.html">read more</a>
+                    </div>
+                </article>
+                <br>
+                 <article class="news-card">
+                    <img src="OIP (3).webp" alt="entertainment news">
+                    <div class="card-content">
+                        <span>entertainment</span>
+                        <h3>The fun company the Ridge</h3>
+                        <p> You will have so much fun and the best time of your life</p>
+                        <a href="entertainment.html">read more</a>
+                    </div>
+                </article>
+                <br>
 
-        <div class="service-container">
-            <div class="service-card">
-                <h3>web design</h3>
-                <p>modern and professinal website foe your business</p>
+                <article class="news-card">
+                    <img src="OIP (3).webp" alt="sports news">
+                    <div class="card-content">
+                        <span>Sports</span>
+                        <h3>Local team wins big match</h3>
+                        <p>Fans celebrate after an axciting performance on the field</p>
+                        <a href="sports.html">read more</a>
+                    </div>
+                </article>
+                <br>
+                
+                 <article class="news-card">
+                    <img src="OIP (3).webp" alt="technology new">
+                    <div class="card-content">
+                        <span>Technology</span>
+                        <h3>New technology changes the future</h3>
+                        <p>Discover how innovation is changing the way people live and work</p>
+                        <a href="technology.html">Read more</a>
+                    </div>
+                </article>
+                <br>
             </div>
-            <div class="service-card">
-            <h3>consulting</h3>
-            <p>expert advice to improve your business perfomance.</p>
-        </div>
-        <div class="service-card">
-            <h3>marketing</h3>
-            <p>reach more customer and build your brand online</p>
-        </div>
-        </div>
-        </section>
-        <section class="about" id="about">
-            <h2>about our business</h2>
-            <p>we are committed to helping business achieve their goal through quality service, creativity,
-                and dedecation.Our mission is to build lasting relationship with our client </p>
-        </section>
-        <section class="contact" id="contact">
-            <h2>contact us</h2>
-            <p>ready to work with us?we'd love to hear from you</p>
-            <a href="balungileskhosana51@gmail.com">classbtn>
-            Email us</a>
         </section>
     </main>
     <footer>
-        <p>&copy ;2026 brightbusiness.all right reserved</p>
-    </footer>
-</body>
-</html>
+        <p>&copy ;2026 Daily News.All rights reserved.</p>
+
+        
